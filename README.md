@@ -117,11 +117,7 @@ Focus: stronger enrichment, exports, automation, and dashboards.
 ## Notes
 This is a learning project and does not replace enterprise threat intel or email security systems.
 
-
-Author 
-
+## Author
 Raj Shevde
 
-
-
-Linkedin: www.linkedin.com/in/rajshevde
+LinkedIn: https://www.linkedin.com/in/rajshevde
