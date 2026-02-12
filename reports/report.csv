@@ -1,0 +1,10 @@
+url,score,risk,signals,labels
+http://xn--secure-login-6k3a.com/verify,50,high,"punycode:Punycode domain detected; keywords:Keywords: login, secure, verify; high_entropy:Entropy: 3.82; http:HTTP used instead of HTTPS",credential_phish
+http://192.168.1.200/secure/update,40,high,"ip_in_url:IP address used instead of domain; keywords:Keywords: secure, update; http:HTTP used instead of HTTPS",credential_phish
+http://paypa1.com-security-update.com/login,35,medium,"keywords:Keywords: login, pay, security, update; high_entropy:Entropy: 3.87; http:HTTP used instead of HTTPS",credential_phish|banking
+http://secure-bank.example.net/update,30,medium,"keywords:Keywords: bank, secure, update; high_entropy:Entropy: 3.72; http:HTTP used instead of HTTPS",credential_phish|banking
+https://login-verification-icloud.com,20,medium,"keywords:Keywords: icloud, login; high_entropy:Entropy: 3.67",credential_phish|cloud
+https://accounts.google.com/login,15,low,"keywords:Keywords: account, google, login",credential_phish|cloud
+https://microsoft.com,5,low,keywords:Keywords: microsoft,cloud
+https://dropbox.com/shared/abc123,0,low,,cloud
+https://example.com,0,low,,

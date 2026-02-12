@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Phishing URL Triage Report</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 24px; }
+table { border-collapse: collapse; width: 100%; }
+th, td { border: 1px solid #ccc; padding: 8px; vertical-align: top; }
+th { background: #f2f2f2; }
+.low { background: #e8f5e9; }
+.medium { background: #fff8e1; }
+.high { background: #ffebee; }
+</style>
+</head>
+<body>
+<h2>Phishing URL Triage Report</h2>
+<table>
+<thead>
+<tr><th>URL</th><th>Score</th><th>Risk</th><th>Signals</th><th>Labels</th><th>Sender</th><th>Subject</th><th>Threat Intel</th><th>RDAP</th><th>DNS</th></tr>
+</thead>
+<tbody>
+<tr class="high"><td>http://xn--secure-login-6k3a.com/verify</td><td>50</td><td>high</td><td>punycode: Punycode domain detected<br>keywords: Keywords: login, secure, verify<br>high_entropy: Entropy: 3.82<br>http: HTTP used instead of HTTPS</td><td>credential_phish</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="high"><td>http://192.168.1.200/secure/update</td><td>40</td><td>high</td><td>ip_in_url: IP address used instead of domain<br>keywords: Keywords: secure, update<br>http: HTTP used instead of HTTPS</td><td>credential_phish</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="medium"><td>http://paypa1.com-security-update.com/login</td><td>35</td><td>medium</td><td>keywords: Keywords: login, pay, security, update<br>high_entropy: Entropy: 3.87<br>http: HTTP used instead of HTTPS</td><td>credential_phish, banking</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="medium"><td>http://secure-bank.example.net/update</td><td>30</td><td>medium</td><td>keywords: Keywords: bank, secure, update<br>high_entropy: Entropy: 3.72<br>http: HTTP used instead of HTTPS</td><td>credential_phish, banking</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="medium"><td>https://login-verification-icloud.com</td><td>20</td><td>medium</td><td>keywords: Keywords: icloud, login<br>high_entropy: Entropy: 3.67</td><td>credential_phish, cloud</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="low"><td>https://accounts.google.com/login</td><td>15</td><td>low</td><td>keywords: Keywords: account, google, login</td><td>credential_phish, cloud</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="low"><td>https://microsoft.com</td><td>5</td><td>low</td><td>keywords: Keywords: microsoft</td><td>cloud</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="low"><td>https://dropbox.com/shared/abc123</td><td>0</td><td>low</td><td>none</td><td>cloud</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr class="low"><td>https://example.com</td><td>0</td><td>low</td><td>none</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+</tbody>
+</table>
+</body>
+</html>
